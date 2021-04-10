@@ -25,6 +25,8 @@ namespace CombatArmsRPG
             Slot = slot;
         }
 
+        public Weapon() { }
+
         public enum LoudoutSlot
         {
             PrimaryWeapon,
