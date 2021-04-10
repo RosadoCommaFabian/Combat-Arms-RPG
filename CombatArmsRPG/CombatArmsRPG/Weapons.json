@@ -1,1 +1,137 @@
-[{"Name":"M4A1","Damage":35,"Ammo":30,"MissChance":0.44,"Range":300,"Cost":0,"Slot":0}]
+[
+  {
+    "Name": "M4A1",
+    "Damage": 35,
+    "Ammo": 30,
+    "MissChance": 0.44,
+    "Range": 300,
+    "Cost": 0,
+    "Slot": 0
+  },
+  {
+    "Name": "L85A1",
+    "Damage": 40,
+    "Ammo": 30,
+    "MissChance": 0.5,
+    "Range": 300,
+    "Cost": 30000,
+    "Slot": 0
+  },
+  {
+    "Name": "AK-47",
+    "Damage": 48,
+    "Ammo": 30,
+    "MissChance": 0.52,
+    "Range": 300,
+    "Cost": 60000,
+    "Slot": 0
+  },
+  {
+    "Name": "G36KE",
+    "Damage": 44,
+    "Ammo": 30,
+    "MissChance": 0.47,
+    "Range": 300,
+    "Cost": 60000,
+    "Slot": 0
+  },
+  {
+    "Name": "M92FS",
+    "Damage": 26,
+    "Ammo": 15,
+    "MissChance": 0.30,
+    "Range": 100,
+    "Cost": 0,
+    "Slot": 1
+  },
+  {
+    "Name": "M1911",
+    "Damage": 45,
+    "Ammo": 7,
+    "MissChance": 0.32,
+    "Range": 100,
+    "Cost": 30000,
+    "Slot": 1
+  },
+  {
+    "Name": "Desert Eagle",
+    "Damage": 70,
+    "Ammo": 7,
+    "MissChance": 0.53,
+    "Range": 100,
+    "Cost": 60000,
+    "Slot": 1
+  },
+  {
+    "Name": "Luger P-08",
+    "Damage": 40,
+    "Ammo": 8,
+    "MissChance": 0.26,
+    "Range": 100,
+    "Cost": 60000,
+    "Slot": 1
+  },
+  {
+    "Name": "USP",
+    "Damage": 40,
+    "Ammo": 10,
+    "MissChance": 0.26,
+    "Range": 100,
+    "Cost": 75000,
+    "Slot": 1
+  },
+  {
+    "Name": "M9",
+    "Damage": 45,
+    "Ammo": -1,
+    "MissChance": 0,
+    "Range": 2,
+    "Cost": 0,
+    "Slot": 2
+  },
+  {
+    "Name": "Brass Knuckles",
+    "Damage": 70,
+    "Ammo": -1,
+    "MissChance": 0,
+    "Range": 2,
+    "Cost": 30000,
+    "Slot": 2
+  },
+  {
+    "Name": "3Lb Sledge",
+    "Damage": 70,
+    "Ammo": -1,
+    "MissChance": 0,
+    "Range": 3,
+    "Cost": 30000,
+    "Slot": 2
+  },
+  {
+    "Name": "Expendable Baton",
+    "Damage": 70,
+    "Ammo": -1,
+    "MissChance": 0,
+    "Range": 5,
+    "Cost": 60000,
+    "Slot": 2
+  },
+  {
+    "Name": "M67 Frag",
+    "Damage": 60,
+    "Ammo": 1,
+    "MissChance": 0,
+    "Range": 30,
+    "Cost": 0,
+    "Slot": 3
+  },
+  {
+    "Name": "M69HE Frag",
+    "Damage": 120,
+    "Ammo": 1,
+    "MissChance": 0,
+    "Range": 30,
+    "Cost": 75000,
+    "Slot": 3
+  }
+]
