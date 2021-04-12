@@ -22,6 +22,7 @@ namespace CombatArmsRPG
                 Console.WriteLine("Weapons.json is missing.");
             }
 
+            MainMenu();
 
         }
         static void PrintBanner()
@@ -33,13 +34,25 @@ namespace CombatArmsRPG
                               "Y8b  d8 `8b  d8' 88  88  88 88   8D 88   88    88      88   88 88 `88. 88  88  88 db   8D\n" +
                               " `Y88P'  `Y88P'  YP  YP  YP Y8888P' YP   YP    YP      YP   YP 88   YD YP  YP  YP `8888Y'\n");
         }
-        static void Save()
+        static void Save() //TODO: Create user data to test Save()
         {
             //write user data to Save.json
             string jsonStringWrite = JsonSerializer.Serialize(UserData);
             File.WriteAllText(UserData, jsonStringWrite);
 
-            //TODO: Create user data to test Save()
+        }
+
+        static void MainMenu()
+        {
+            Console.Write("\nMAIN MENU\n" +
+                          "---------\n" +
+                          "1.GAME START\n" +
+                          "2.LOADOUT\n" +
+                          "3.SHOP\n\n" +
+                          "0.EXIT\n" +
+                          "CHOICE: ");
+            int response = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Your response was: " + response);
         }
     }
 }
