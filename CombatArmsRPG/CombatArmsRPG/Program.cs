@@ -44,7 +44,6 @@ namespace CombatArmsRPG
 
         static void MainMenu()
         {
-            int mainChoice = 0;
             Console.Write("\nMAIN MENU\n" +
                           "---------\n" +
                           "1.GAME START\n" +
@@ -53,21 +52,10 @@ namespace CombatArmsRPG
 
                           "0.EXIT\n" +
                           "CHOICE: ");
-            try 
-            { 
-            mainChoice = Convert.ToInt32(Console.ReadLine());
-            }
-            catch (FormatException formatEx)
-            {
-                Console.WriteLine("You idiot! That's not a number. Try again...");
-                MainMenu();
-            }
-            while(mainChoice < 0 && mainChoice > 3)
-            {
-                Console.WriteLine("Erroneous input. Choose a number from 8-3.");
-                MainMenu();
-            }
-            switch(mainChoice)
+
+            int input = ParseMenuResponse(4);
+
+            switch (input)
             {
                 case 1:
                     Console.WriteLine("Starting game...");
@@ -82,9 +70,7 @@ namespace CombatArmsRPG
                     Console.WriteLine("Exiting...");
                     break;
                 default:
-                    Console.WriteLine("Erroneous input. Choose a number from 8-3.");
-                    MainMenu();
-                    break;
+                    throw new Exception($"Unexpected input: {input}");
             }
 
         }
@@ -97,6 +83,24 @@ namespace CombatArmsRPG
 
                               "0.EXIT\n" +
                               "CHOICE: ");
+
+            int input = ParseMenuResponse(3);
+
+            switch (input)
+            {
+                case 1:
+                    Console.WriteLine("Traveling to Junk Flea...");
+                    break;
+                case 2:
+                    Console.WriteLine("Traveling to Death Room...");
+                    break;
+                case 0:
+                    Console.WriteLine("Exiting...");
+                    break;
+                default:
+                    throw new Exception($"Unexpected input: {input}");
+            }
+
         }
         static void LoudoutMenu()
         {
@@ -130,6 +134,25 @@ namespace CombatArmsRPG
                           "5.BACK\n" +
                           "0.EXIT\n" +
                           "CHOICE: ");
+        }
+        static int ParseMenuResponse(int choiceCount)
+        {
+            while (true)
+            {
+                if (!int.TryParse(Console.ReadLine(), out int choice))
+                {
+                    Console.WriteLine("You idiot! That's not a number. Try again...");
+                    continue;
+                }
+
+                if (choice < 0 && choice > choiceCount)
+                {
+                    Console.WriteLine("Erroneous input. Choose a number within range.");
+                    continue;
+                }
+
+                return choice;
+            }
         }
     }
 }
