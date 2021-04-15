@@ -44,15 +44,92 @@ namespace CombatArmsRPG
 
         static void MainMenu()
         {
+            int mainChoice = 0;
             Console.Write("\nMAIN MENU\n" +
                           "---------\n" +
                           "1.GAME START\n" +
                           "2.LOADOUT\n" +
                           "3.SHOP\n\n" +
+
                           "0.EXIT\n" +
                           "CHOICE: ");
-            int response = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Your response was: " + response);
+            try 
+            { 
+            mainChoice = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException formatEx)
+            {
+                Console.WriteLine("You idiot! That's not a number. Try again...");
+                MainMenu();
+            }
+            while(mainChoice < 0 && mainChoice > 3)
+            {
+                Console.WriteLine("Erroneous input. Choose a number from 8-3.");
+                MainMenu();
+            }
+            switch(mainChoice)
+            {
+                case 1:
+                    Console.WriteLine("Starting game...");
+                    break;
+                case 2:
+                    Console.WriteLine("Moving to loudout...");
+                    break;
+                case 3:
+                    Console.WriteLine("Time to go shopping...");
+                    break;
+                case 0:
+                    Console.WriteLine("Exiting...");
+                    break;
+                default:
+                    Console.WriteLine("Erroneous input. Choose a number from 8-3.");
+                    MainMenu();
+                    break;
+            }
+
+        }
+        static void StoryMenu()
+        {
+            Console.Write("\nSTORY MENU\n" +
+                              "------------\n" +
+                              "1.MISSION 1 - JUNK FLEA\n" +
+                              "2.MISSION 2 - DEATH ROOM\n\n" +
+
+                              "0.EXIT\n" +
+                              "CHOICE: ");
+        }
+        static void LoudoutMenu()
+        {
+            Console.Write("LOADOUT\n" +
+                              "-------\n" +
+                              "CURRENT LOADOUT... \n" +
+                              "PRIMARY WEAPON: \n" +
+                              "SECONDARY WEAPON: \n" +
+                              "MELEE: \n" +
+                              "SUPPORT: \n\n" +
+
+                              "CHANGE LOADOUT FOR...\n" +
+                              "1.PRIMARY WEAPON\n" +
+                              "2.SECONDARY WEAPON\n" +
+                              "3.MELEE\n" +
+                              "4.SUPPORT\n\n" +
+
+                              "5.BACK\n\n" +
+                              "0.EXIT\n" +
+                              "CHOICE: ");
+        }
+        static void ShopMenu()
+        {
+            Console.Write("SHOP    GP: \n" +
+                          "----\n" +
+                          "1.PRIMARY WEAPONS\n" +
+                          "2.SECONDARY WEAPONS\n" +
+                          "3.MELEE\n" +
+                          "4.SUPPORT\n\n" +
+
+                          "5.BACK\n" +
+                          "0.EXIT\n" +
+                          "CHOICE: ");
         }
     }
 }
